@@ -1,0 +1,5 @@
+- name: ftp
+  config:
+    root: "/var/dionaea/roots/ftp/root"
+    response_messages:
+      welcome_msg: 220 Windows Server 2012

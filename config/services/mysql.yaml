@@ -1,0 +1,5 @@
+- name: mysql
+  config:
+    databases:
+      information_schema:
+        path: ':memory:'

@@ -1,0 +1,5 @@
+- name: log_json
+  config:
+    handlers:
+      # - http://localhost:8080
+      - file:///var/dionaea/log/dionaea_json.json

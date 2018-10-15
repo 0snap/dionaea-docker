@@ -1,0 +1,5 @@
+- name: log_incident
+  config:
+    handlers:
+      # - http://localhost:8080
+      - file:///var/dionaea/log/dionaea_incident.json

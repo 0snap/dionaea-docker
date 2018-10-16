@@ -75,7 +75,6 @@ EXPOSE 53
 EXPOSE 53/udp
 EXPOSE 123/udp
 
-COPY config/dionaea.cfg /opt/dionaea/etc/dionaea.cfg
 RUN mkdir -p /var/dionaea/binaries \
     /var/dionaea/bitstreams \
     /var/dionaea/logs \
@@ -93,5 +92,6 @@ RUN rm -rf /opt/dionaea/etc/dionaea/services-enabled && \
 
 COPY config/ihandlers /opt/dionaea/etc/dionaea/ihandlers-enabled
 COPY config/services /opt/dionaea/etc/dionaea/services-enabled
+COPY config/dionaea.cfg /opt/dionaea/etc/dionaea/dionaea.cfg
 
-CMD /opt/dionaea/bin/dionaea -l info -L '*' -c /opt/dionaea/etc/dionaea.cfg
+CMD /opt/dionaea/bin/dionaea -l info -L '*' -c /opt/dionaea/etc/dionaea/dionaea.cfg
